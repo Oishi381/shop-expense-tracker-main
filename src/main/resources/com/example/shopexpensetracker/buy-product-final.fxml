@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="689.6" stylesheets="@../../../StyleSheet/app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.BuyProductFinalController">
+   <Line endX="496.79998779296875" layoutX="152.0" layoutY="125.0" startX="-100.80000305175781" stroke="#0000004d" />
+   <Label layoutX="51.0" layoutY="43.0" prefHeight="35.0" prefWidth="600.0" text="Order &amp; Payment">
+      <font>
+         <Font name="☞Gilroy-Medium" size="30.0" />
+      </font>
+   </Label>
+   <Label layoutX="51.0" layoutY="88.0" text="Confirm your order and pay ammount now" textFill="#767676">
+      <font>
+         <Font name="☞Gilroy-Medium" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="585.0" layoutY="67.0" onMouseClicked="#toBuy" text="←  Back">
+      <font>
+         <Font name="☞Gilroy-Medium" size="18.0" />
+      </font>
+   </Label>
+   <HBox layoutX="51.0" layoutY="140.0" prefHeight="150.0" prefWidth="600.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="39.0">
+      <VBox prefHeight="222.0" prefWidth="600.0">
+         <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="300.0" spacing="4.0">
+            <Label text="Product Name : ">
+               <font>
+                  <Font name="☞Gilroy-Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="productFinalName" text="Product Name">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="300.0" spacing="4.0">
+            <Label text="Product Price: ">
+               <font>
+                  <Font name="☞Gilroy-Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="productFinalPrice" text="\$">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="300.0" spacing="4.0">
+            <Label text="Product Stock: ">
+               <font>
+                  <Font name="☞Gilroy-Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="productFinalStock" text="0">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Label>
+         </HBox>
+      </VBox>
+   </HBox>
+   <Line endX="496.79998779296875" layoutX="151.0" layoutY="302.0" startX="-100.80000305175781" stroke="#0000004d" />
+   <HBox alignment="CENTER_LEFT" layoutX="51.0" layoutY="316.0" prefHeight="50.0" prefWidth="599.0" spacing="28.0">
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label prefHeight="25.0" prefWidth="165.0" text="Order Quantity: ">
+               <font>
+                  <Font name="☞Gilroy-Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="productFinalQuantity" onKeyReleased="#calclulateBill" prefHeight="36.0" prefWidth="139.0" promptText="Enter quantity " />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label prefHeight="25.0" prefWidth="106.0" text="Sell Price:">
+               <font>
+                  <Font name="☞Gilroy-Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="productSellPrice" onKeyReleased="#calclulateBill" prefHeight="36.0" prefWidth="153.0" promptText="Enter price" />
+         </children>
+      </HBox>
+   </HBox>
+   <Button layoutX="499.0" layoutY="389.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: FF8A00;" styleClass=".button" text="Buy Product">
+      <font>
+         <Font name="☞Gilroy-Bold" size="18.0" />
+      </font>
+   </Button>
+   <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="386.0" prefHeight="56.0" prefWidth="302.0" spacing="10.0" style="-fx-background-color: #0E5C4620; -fx-text-fill: white;">
+      <padding>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+      </padding>
+      <Label text="Total Bill:" textFill="#0e5c46">
+         <font>
+            <Font name="☞Gilroy-Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalBill" text="\$" textFill="#0e5c46">
+         <font>
+            <Font name="☞Gilroy-Medium" size="18.0" />
+         </font>
+      </Label>
+   </HBox>
+</AnchorPane>

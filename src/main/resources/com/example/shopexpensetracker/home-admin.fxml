@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="915.0" stylesheets="@../../../StyleSheet/app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.Home_AdminController">
+   <left>
+      <VBox prefHeight="472.0" prefWidth="225.0" spacing="4.0" style="-fx-background-color: #0f0f0f;" BorderPane.alignment="CENTER">
+         <Pane prefHeight="62.0" prefWidth="226.0" style="-fx-background-color: #3D3D3D;">
+            <children>
+               <Label layoutX="57.0" layoutY="19.0" text="User: Admin" textFill="WHITE">
+                  <font>
+                     <Font name="☞Gilroy-Bold" size="20.0" />
+                  </font>
+               </Label>
+            </children></Pane>
+         <Pane prefHeight="28.0" prefWidth="226.0" style="-fx-background-color: #0f0f0f;" />
+         <Button fx:id="productManageBtn" mnemonicParsing="false" onAction="#toProductManage" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Manage Products" />
+         <Button fx:id="couponDiscountBtn" mnemonicParsing="false" onAction="#toCoupon" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Coupon &amp; Discount" />
+         <Button fx:id="buyBtn" mnemonicParsing="false" onAction="#toBuy" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Buy Product" />
+         <Button fx:id="paySalaryBtn" mnemonicParsing="false" onAction="#toPaySalary" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Pay Salary" />
+         <Button fx:id="payBillsBtn" mnemonicParsing="false" onAction="#toPayBills" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Pay Bills" />
+         <Button fx:id="reportBtn" mnemonicParsing="false" onAction="#toReport" prefHeight="42.0" prefWidth="226.0" styleClass=".button" text="Generate Report" />
+         <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#toHome" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: e00606;" styleClass=".button" text="Logout">
+            <VBox.margin>
+               <Insets top="16.0" />
+            </VBox.margin>
+         </Button>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <StackPane fx:id="contentArea" prefHeight="472.0" prefWidth="689.6" style="-fx-background-color: #F3F3F3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </AnchorPane>
+   </center>
+   <top>
+      <Pane prefHeight="70.0" prefWidth="915.0" style="-fx-background-color: #0E5C46;" BorderPane.alignment="CENTER">
+         <Label layoutX="329.0" layoutY="20.0" style="-fx-text-fill: white;" text="Shop Expense Tracker">
+            <font>
+               <Font name="☞Gilroy-Bold" size="25.0" />
+            </font>
+         </Label>
+      </Pane>
+   </top>
+</BorderPane>

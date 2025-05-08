@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="472.0" prefWidth="689.6" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.BuyProductController">
+   <children>
+      <Pane prefHeight="98.0" prefWidth="690.0">
+         <children>
+            <Label layoutX="42.0" layoutY="21.0" prefHeight="19.0" prefWidth="606.0" text="Buy Products">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="67.0" text="Buy products from third party vendors" textFill="#767676">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="379.0" prefWidth="690.0">
+         <children>
+            <ScrollPane fx:id="scroll" fitToHeight="true" fitToWidth="true" prefHeight="570.0" prefWidth="690.0" styleClass="transparent">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="359.0" prefWidth="690.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

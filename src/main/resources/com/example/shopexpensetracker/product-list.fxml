@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0"
+            prefWidth="689.6" stylesheets="@../../../StyleSheet/app.css" xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.Product_ListController">
+    <TableView fx:id="table" layoutX="37.0" layoutY="121.0" prefHeight="316.0" prefWidth="615.0">
+      <columns>
+          <TableColumn fx:id="productID" prefWidth="100.00000381469727" text="Product ID"/>
+          <TableColumn fx:id="productName" prefWidth="235.99998474121094" text="Product Name"/>
+          <TableColumn fx:id="price" prefWidth="128.0" text="Price"/>
+          <TableColumn fx:id="stock" prefWidth="115.99993896484375" text="Stock"/>
+      </columns>
+    </TableView>
+    <Label layoutX="41.0" layoutY="33.0" prefHeight="19.0" prefWidth="606.0" text="Products List">
+        <font>
+          <Font name="☞Gilroy-Medium" size="30.0"/>
+        </font>
+    </Label>
+    <Label layoutX="41.0" layoutY="78.0" text="All the product list are available here" textFill="#767676"/>
+</AnchorPane>

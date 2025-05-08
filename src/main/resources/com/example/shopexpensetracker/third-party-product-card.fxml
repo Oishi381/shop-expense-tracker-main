@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="200.0" style="-fx-border-color: #32323220; -fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.ThirdPartyProductController">
+   <VBox alignment="CENTER" prefHeight="210.0" prefWidth="218.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Group>
+         <Label fx:id="productNameLabel" alignment="CENTER" contentDisplay="RIGHT" prefHeight="41.0" prefWidth="238.0" text="Product Name " wrapText="true">
+            <font>
+               <Font name="☞Gilroy-Medium" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="priceLabel" alignment="CENTER" contentDisplay="RIGHT" layoutY="41.599998474121094" prefHeight="41.0" prefWidth="240.0" text="Price: $129">
+            <font>
+               <Font name="☞Gilroy-Regular" size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="stockLabel" alignment="CENTER" contentDisplay="RIGHT" layoutY="83.19999694824219" prefHeight="41.0" prefWidth="240.0" text="Available: 100">
+            <font>
+               <Font name="☞Gilroy-Regular" size="14.0" />
+            </font>
+         </Label>
+      </Group>
+      <Button fx:id="buyProductBtn" onAction="#toBuyProductFinal" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: FF8A00;" stylesheets="@../../../StyleSheet/app.css" text="Buy Product" textFill="#ff8a00">
+         <font>
+            <Font name="☞Gilroy-Medium" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+   </VBox>
+</AnchorPane>

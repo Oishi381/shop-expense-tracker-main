@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="689.6" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.PayBillsController">
+   <Label layoutX="51.0" layoutY="43.0" prefHeight="19.0" prefWidth="606.0" text="Pay Bills">
+      <font>
+         <Font name="☞Gilroy-Medium" size="30.0" />
+      </font>
+   </Label>
+   <Label layoutX="51.0" layoutY="88.0" text="Track all your bills payment from here" textFill="#767676">
+      <font>
+         <Font name="☞Gilroy-Medium" size="14.0" />
+      </font>
+   </Label>
+   <HBox layoutX="54.0" layoutY="143.0" prefHeight="294.0" prefWidth="600.0" spacing="40.0">
+      <VBox prefHeight="200.0" prefWidth="280.0">
+         <TableView fx:id="table" prefHeight="250.0" prefWidth="280.0">
+            <columns>
+               <TableColumn fx:id="ProductName" prefWidth="252.8000373840332" text="Bill Name" />
+            </columns>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </TableView>
+      </VBox>
+      <VBox prefHeight="294.0" prefWidth="280.0">
+         <VBox prefHeight="100.0" prefWidth="303.0" spacing="12.0">
+            <Label text="Choose Bill">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="billChoiceList" onAction="#onSelectProduct" prefHeight="36.0" prefWidth="411.0" style="-fx-background-color: #0e5c46;" />
+         </VBox>
+         <VBox prefHeight="100.0" prefWidth="303.0" spacing="12.0">
+            <Label text="Bill Amount">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="billAmountField" prefHeight="36.0" prefWidth="298.0" promptText="Enter amount">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="16.0" />
+               </font>
+            </TextField>
+         </VBox>
+         <VBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="300.0">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#onPayBill" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: FF8A00;" styleClass=".button" text="Pay Bill" textFill="WHITE">
+               <font>
+                  <Font name="☞Gilroy-Medium" size="18.0" />
+               </font>
+            </Button>
+         </VBox>
+      </VBox>
+   </HBox>
+   <Line endX="500.79998779296875" endY="7.62939453125E-6" layoutX="154.0" layoutY="118.0" startX="-100.80000305175781" startY="7.62939453125E-6" stroke="#00000033" />
+   <HBox alignment="CENTER_LEFT" layoutX="371.0" layoutY="72.0">
+      <TextField fx:id="billNameField" prefHeight="34.0" prefWidth="185.0" promptText="Enter bill name">
+         <font>
+            <Font name="☞Gilroy-Medium" size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets right="-10.0" />
+         </HBox.margin>
+      </TextField>
+      <Button mnemonicParsing="false" onAction="#addBillName" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #0e5c46;" styleClass=".button" text="+ Add Bill " textFill="WHITE">
+         <font>
+            <Font name="☞Gilroy-Medium" size="16.0" />
+         </font>
+      </Button>
+   </HBox>
+</AnchorPane>

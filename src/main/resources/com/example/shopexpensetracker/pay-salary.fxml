@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="689.6" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.PaySalaryController">
+   <children>
+      <TableView fx:id="salaryTable" layoutX="46.0" layoutY="142.0" prefHeight="303.0" prefWidth="597.0">
+         <columns>
+            <TableColumn fx:id="employeeID" prefWidth="57.0" text="ID" />
+            <TableColumn fx:id="employeeName" prefWidth="178.0" text="Employee Name" />
+            <TableColumn fx:id="employeeEmail" prefWidth="185.0" text="Employee Email" />
+            <TableColumn fx:id="employeePaid" prefWidth="82.0" text="Status" />
+            <TableColumn fx:id="employeeAction" prefWidth="79.0" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="51.0" layoutY="43.0" prefHeight="35.0" prefWidth="597.0" text="Pay Salary">
+         <font>
+            <Font name="☞Gilroy-Medium" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="86.0" text="Pay salary to all your employee" textFill="#767676">
+         <font>
+            <Font name="☞Gilroy-Medium" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="492.0" layoutX="148.0" layoutY="117.0" startX="-100.0" stroke="#00000033" />
+   </children>
+</AnchorPane>

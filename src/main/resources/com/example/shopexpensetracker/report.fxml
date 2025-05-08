@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="689.6" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopexpensetracker.ReportController">
+   <TableView fx:id="reportTable" layoutX="46.0" layoutY="109.0" prefHeight="306.0" prefWidth="615.0">
+      <columns>
+         <TableColumn fx:id="reportDate" prefWidth="119.20001602172852" text="Date" />
+         <TableColumn fx:id="reportTitle" prefWidth="301.59996032714844" text="Report Title" />
+         <TableColumn fx:id="reportAmount" prefWidth="170.400146484375" text="Amount" />
+      </columns>
+   </TableView>
+   <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="31.0">
+      <VBox prefHeight="58.0" prefWidth="405.0" spacing="6.0">
+         <Label prefHeight="19.0" prefWidth="606.0" text="Generate Report">
+            <font>
+               <Font name="☞Gilroy-Medium" size="30.0" />
+            </font>
+         </Label>
+         <Label text="You can see all your expense and revenue" textFill="#767676">
+            <font>
+               <Font name="☞Gilroy-Medium" size="14.0" />
+            </font>
+         </Label>
+      </VBox>
+      <ChoiceBox fx:id="reportDurationChoice" onAction="#onSelectDuration" prefHeight="26.0" prefWidth="203.0" style="-fx-background-color: #0E5C46;" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="426.0" prefHeight="35.0" prefWidth="273.0" spacing="10.0" style="-fx-background-color: #0E5C4620; -fx-text-fill: white;">
+      <children>
+         <Label text="Total Revenue" textFill="#0e5c46">
+            <font>
+               <Font name="☞Gilroy-Bold" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="reportRevenue" text="\$" textFill="#0e5c46">
+            <font>
+               <Font name="☞Gilroy-Bold" size="18.0" />
+            </font>
+         </Label>
+      </children>
+      <padding>
+         <Insets left="16.0" />
+      </padding>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" layoutX="385.0" layoutY="426.0" prefHeight="35.0" prefWidth="273.0" spacing="10.0" style="-fx-background-color: #dd020220; -fx-text-fill: white;">
+      <children>
+         <Label text="Total Expense" textFill="#dd0202">
+            <font>
+               <Font name="☞Gilroy-Bold" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="reportExpense" text="\$" textFill="#dd0202">
+            <font>
+               <Font name="☞Gilroy-Bold" size="18.0" />
+            </font>
+         </Label>
+      </children>
+      <padding>
+         <Insets left="16.0" />
+      </padding>
+   </HBox>
+</AnchorPane>
